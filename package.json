@@ -1,0 +1,26 @@
+{
+  "name": "todo-react",
+  "description": "使用react & requirejs构建的todo-list demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanzhaohao/todo-react.git"
+  },
+  "keywords": [
+    "react",
+    "todo",
+    "require",
+    "requirejs",
+    "components"
+  ],
+  "author": "yuanzhaohao",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-connect": "~2.2.0",
+    "gulp-open": "~0.3.2",
+    "gulp-code": "1.x.x",
+    "gulp-rename": "1.x.x"
+  }
+}
