@@ -48,6 +48,17 @@ define('TodoAction', function () {
       this.store(todos);
     },
 
+    clear: function () {
+      var todos = this.getAll(),
+        i = todos.length;
+      while (i--) {
+        if (todos[i].complete) {
+          todos.splice(i, 1);
+        }
+      }
+      this.store(todos);
+    },
+
     checkAllComplete: function () {
       var todos = this.getAll(),
         i = todos.length;

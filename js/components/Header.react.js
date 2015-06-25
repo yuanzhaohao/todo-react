@@ -22,7 +22,7 @@ function (List, Item, TextInput, TodoAction) {
           text: text,
           complete: false
         });
-        React.render(<List allTodos={TodoAction.getAll()} />, document.querySelector('#main'));
+        // React.render(<List allTodos={TodoAction.getAll()} />, document.querySelector('#main'));
       }
     }
   });

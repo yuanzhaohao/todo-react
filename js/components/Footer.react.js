@@ -1,4 +1,6 @@
-define('Footer.react', function () {
+define('Footer.react',
+['TodoAction'],
+function (TodoAction) {
   var Footer = React.createClass({
     render: function () {
       var allTodos = this.props.allTodos;
@@ -43,7 +45,7 @@ define('Footer.react', function () {
     },
 
     _onClearCompletedClick: function (e) {
-      console.log(e.currentTarget);
+      TodoAction.clear();
     }
   });
   return Footer;
