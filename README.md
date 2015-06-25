@@ -1,4 +1,4 @@
-## YScroll - 高性能的无线滚动组件
+## todo-react: 使用reactjs & requirejs构建的todo-list demo
 
 ### 使用gulp进行构建
 

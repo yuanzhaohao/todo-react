@@ -1,6 +1,6 @@
 define('Header.react',
-['TextInput.react', 'Item.react', 'TodoAction'],
-function (TextInput, Item, TodoAction) {
+['List.react', 'Item.react', 'TextInput.react', 'TodoAction'],
+function (List, Item, TextInput, TodoAction) {
   var Header = React.createClass({
     render: function () {
       return (
@@ -23,7 +23,16 @@ function (TextInput, Item, TodoAction) {
           complete: false
         };
         TodoAction.create(todo);
-        // React.render(<Item todo={todo} />, document.querySelector('#todo-list'));
+
+        var allTodos = TodoAction.getAll(),
+          todos = [],
+          i = allTodos.length,
+          item;
+        while (i--) {
+          item = allTodos[i];
+          todos.unshift(<Item key={item.key} todo={item} />);
+        }
+        React.render(<List allTodos={todos} />, document.querySelector('#todo-list'));
       }
     }
   });

@@ -14,9 +14,7 @@ function (Header, Main, TodoAction) {
     render: function () {
       return <div>
         <Header />
-        <Main
-          allTodos={this.state.allTodos}
-        />
+        <Main allTodos={this.state.allTodos} />
       </div>;
     }
   });
