@@ -12,7 +12,7 @@ function (Item) {
         todos.unshift(<Item key={item.key} todo={item} />);
       }
       return (
-        <div>{todos}</div>
+        <ul id="todo-list">{todos}</ul>
       );
     }
   });

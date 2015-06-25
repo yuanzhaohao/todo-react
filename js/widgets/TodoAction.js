@@ -5,6 +5,7 @@ define('TodoAction', function () {
     store: function (todos) {
       this.localStorage().setItem(this.name, JSON.stringify(todos));
     },
+
     create: function (todo) {
       var todos = this.getAll();
       todos.unshift(todo)
@@ -50,6 +51,17 @@ define('TodoAction', function () {
         todos.splice(k, 1);
       }
       this.store(todos);
+    },
+
+    checkAllComplete: function () {
+      var todos = this.getAll(),
+        i = todos.length;
+      while (i--) {
+        if (todos[i].complete === false) {
+          return false;
+        }
+      }
+      return true;
     }
   };
 

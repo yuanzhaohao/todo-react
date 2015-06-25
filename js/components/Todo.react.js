@@ -3,7 +3,8 @@ define('Todo.react',
 function (Header, Main, TodoAction) {
   function getTodoState () {
     return {
-      allTodos: TodoAction.getAll() || []
+      allTodos: TodoAction.getAll() || [],
+      areAllComplete: TodoAction.checkAllComplete()
     };
   }
   var Todo = React.createClass({
@@ -14,7 +15,10 @@ function (Header, Main, TodoAction) {
     render: function () {
       return <div>
         <Header />
-        <Main allTodos={this.state.allTodos} />
+        <Main
+          allTodos={this.state.allTodos}
+          areAllComplete={this.state.areAllComplete} 
+        />
       </div>;
     }
   });

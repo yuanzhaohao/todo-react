@@ -17,22 +17,12 @@ function (List, Item, TextInput, TodoAction) {
 
     _onSave: function (text) {
       if (text = text.trim()) {
-        var todo = {
+        TodoAction.create({
           key: +new Date,
           text: text,
           complete: false
-        };
-        TodoAction.create(todo);
-
-        var allTodos = TodoAction.getAll(),
-          todos = [],
-          i = allTodos.length,
-          item;
-        while (i--) {
-          item = allTodos[i];
-          todos.unshift(<Item key={item.key} todo={item} />);
-        }
-        React.render(<List allTodos={todos} />, document.querySelector('#todo-list'));
+        });
+        React.render(<List allTodos={TodoAction.getAll()} />, document.querySelector('#main'));
       }
     }
   });
