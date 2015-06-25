@@ -24,12 +24,12 @@ define('TodoAction', function () {
       return data && JSON.parse(data);
     },
 
-    updateText: function (key, text) {
+    update: function (todo) {
       var todos = this.getAll(),
         i = todos.length;
       while (i--) {
-        if (key === todos[i].key) {
-          todos[i].text = text;
+        if (todo.key === todos[i].key) {
+          todos[i] = todo;
           break;
         }
       }
@@ -38,17 +38,12 @@ define('TodoAction', function () {
 
     destroy: function (key) {
       var todos = this.getAll(),
-        i = todos.length,
-        todo, k;
+        i = todos.length;
       while (i--) {
-        todo = todos[i];
-        if (key === todo.key) {
-          k = i;
+        if (key ===  todos[i].key) {
+          todos.splice(i, 1);
           break;
         }
-      }
-      if (typeof k !== undefined) {
-        todos.splice(k, 1);
       }
       this.store(todos);
     },

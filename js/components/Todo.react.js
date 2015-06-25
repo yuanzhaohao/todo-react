@@ -1,6 +1,6 @@
 define('Todo.react',
-['Header.react', 'Main.react', 'TodoAction'],
-function (Header, Main, TodoAction) {
+['Header.react', 'Main.react', 'Footer.react', 'TodoAction'],
+function (Header, Main, Footer, TodoAction) {
   function getTodoState () {
     return {
       allTodos: TodoAction.getAll() || [],
@@ -17,8 +17,9 @@ function (Header, Main, TodoAction) {
         <Header />
         <Main
           allTodos={this.state.allTodos}
-          areAllComplete={this.state.areAllComplete} 
+          areAllComplete={this.state.areAllComplete}
         />
+        <Footer allTodos={this.state.allTodos} />
       </div>;
     }
   });

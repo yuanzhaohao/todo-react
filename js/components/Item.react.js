@@ -54,6 +54,7 @@ function (TextInput, TodoAction) {
       });
       var todo = this.props.todo;
       todo.complete = !todo.complete;
+      TodoAction.update(todo);
     },
 
     _onDestroyClick: function (e) {
@@ -70,7 +71,7 @@ function (TextInput, TodoAction) {
       if (text = text.trim()) {
         var todo = this.props.todo;
         todo.text = text.trim();
-        TodoAction.updateText(todo.key, todo.text);
+        TodoAction.update(todo);
       }
       this.setState({
         isEditing: false
