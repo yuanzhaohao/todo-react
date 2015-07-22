@@ -1,6 +1,6 @@
 {
   "name": "todo-react",
-  "description": "使用react & requirejs构建的todo-list demo",
+  "description": "使用react、flux、gulp、browserify构建的todo-list demo",
   "repository": {
     "type": "git",
     "url": "https://github.com/yuanzhaohao/todo-react.git"
@@ -9,18 +9,39 @@
     "react",
     "todo",
     "require",
-    "requirejs",
-    "components"
+    "browserify",
+    "components",
+    "gulp"
   ],
   "author": "yuanzhaohao",
   "engines": {
     "node": ">= 0.10.0"
   },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "react-kit": "^0.1.2"
+  },
+  "peerDependencies": {
+    "react": ">=0.12.0"
+  },
   "devDependencies": {
+    "flux": "~2.0.0",
+    "object-assign": "*",
+    "reactify": "^0.17.0",
+    "browserify": "^6.3.3",
+    "browserify-shim": "^3.8.0",
+    "watchify": "^2.1.1",
     "gulp": "~3.8.11",
     "gulp-connect": "~2.2.0",
-    "gulp-open": "~0.3.2",
     "gulp-code": "1.x.x",
-    "gulp-rename": "1.x.x"
+    "gulp-rename": "1.x.x",
+    "vinyl-paths": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0",
+    "gulp-react": "^3.0.1",
+    "gulp-open": "~0.3.2"
   }
 }

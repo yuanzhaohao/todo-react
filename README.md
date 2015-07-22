@@ -1,4 +1,4 @@
-## todo-react: 使用reactjs & requirejs构建的todo-list demo
+## todo-react: 使用react、flux、gulp、browserify构建的todo-list demo
 
 ### 使用gulp进行构建
 
