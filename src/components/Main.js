@@ -11,7 +11,7 @@ var Main = React.createClass({
       todos = [],
       item;
     for (var k in allTodos) {
-      todos.push(<Item todo={allTodos[k]} />);
+      todos.push(<Item key={allTodos[k].id} todo={allTodos[k]} />);
     }
     return (
       <section id="main">
