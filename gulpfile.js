@@ -25,6 +25,16 @@ gulp.task('js', function () {
     .pipe(gulp.dest('demo'));
 });
 
+gulp.task('dist', ['js'], function () {
+  return gulp.src(['./demo/bundle.js'])
+      .pipe(rename(function (path) {
+          path.basename = path.basename + '.min';
+      }))
+      .pipe(code.lint())
+      .pipe(code.minify())
+      .pipe(gulp.dest('demo'));
+});
+
 gulp.task('connect', function () {
   return connect.server({
     root: ['./demo'],
@@ -38,8 +48,8 @@ gulp.task('open', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['src/**/*.js'], ['js']);
+  gulp.watch(['src/**/*.js'], ['dist']);
 });
 
-gulp.task('default', ['js']);
+gulp.task('default', ['dist']);
 gulp.task('server', ['connect', 'watch', 'open']);
