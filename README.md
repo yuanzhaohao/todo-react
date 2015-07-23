@@ -6,4 +6,9 @@
   `npm install`、`gulp`
 
 #### 查看demo
-执行`gulp server`，就会自动打开[http://localhost:3000/index.html](http://localhost:3000/index.html)
+执行`gulp server`，就会自动打开[http://localhost:3333](http://localhost:3333)
+
+#### 参考
+
+* [官方栗子](https://facebook.github.io/flux/docs/todo-list.html)
+* [Architecting React.js Apps with Flux](http://tylermcginnis.com/reactjs-tutorial-pt-3-architecting-react-js-apps-with-flux/)
