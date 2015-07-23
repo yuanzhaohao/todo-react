@@ -24,8 +24,8 @@ var localAction = {
   }
 };
 
-var _todos = localAction.get() || {};
-var EVENT = 'change';
+var _todos = localAction.get() || {},
+  EVENT = 'change';
 
 function create (text) {
   var id = +new Date;
