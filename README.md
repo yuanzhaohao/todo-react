@@ -4,7 +4,7 @@ todo-react
 
 ## Demo & Examples
 
-Live demo: [http://yuanzhaohao.com/lazyload/demo/](http://yuanzhaohao.com/lazyload/demo/)
+Live demo: [http://yuanzhaohao.github.io/todo-react/](http://yuanzhaohao.github.io/todo-react/)
 
 To build the examples locally, run:
 
