@@ -1,6 +1,6 @@
 todo-react
 =====
-> 使用react、flux、gulp、browserify构建的todo-list demo
+> A todo-list demo build by react, flux, gulp, browserify!
 
 ## Demo & Examples
 
