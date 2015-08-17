@@ -14,6 +14,7 @@ gulp server
 ```
 
 Then your example([localhost:3000/demo/](localhost:3000/demo/)) will open automatically in browser.
+
 ## Reference
 
 * [Official demo](https://facebook.github.io/flux/docs/todo-list.html)
